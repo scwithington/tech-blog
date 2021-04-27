@@ -1,0 +1,24 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS blog_db;
+
+-- CREATE DATABASE
+CREATE DATABASE blog_db;
+
+CREATE TABLE user (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user_name VARCHAR(200) NOT NULL,
+    user_password VARCHAR(200) NOT NULL
+)
+
+CREATE TABLE post (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(200) NOT NULL,
+    content VARCHAR(500) NOT NULL,
+    user_id int NOT NULL
+)
+
+CREATE TABLE comment (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    content VARCHAR(300) NOT NULL,
+    user_id int NOT NULL
+)
