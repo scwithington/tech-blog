@@ -11,14 +11,10 @@ CREATE TABLE user (
 )
 
 CREATE TABLE post (
-    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(200) NOT NULL,
     content VARCHAR(500) NOT NULL,
-    user_id int NOT NULL
 )
 
 CREATE TABLE comment (
-    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     content VARCHAR(300) NOT NULL,
-    user_id int NOT NULL
 )
